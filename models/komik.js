@@ -12,7 +12,13 @@ module.exports= (sequelize, DataTypes)=>{
     },
     author:{
         type:DataTypes.STRING,
-    }
-});
-return Komik;
+    },
+    imageType: DataTypes.STRING,
+    imageName: DataTypes.STRING,
+    ImageData: DataTypes.BLOB('long'),
+},{
+    tableName: 'komik',
 }
+);
+return Komik;
+};
